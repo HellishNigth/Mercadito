@@ -19,3 +19,7 @@
         </div>
     </div>
 @endsection
+@section("javascript")
+    <script src="{{asset('js/servicios/productosService.js')}}"></script>
+    <script src="{{asset('js/ver_productos.js')}}"></script>
+@endsection

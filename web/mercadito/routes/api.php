@@ -10,3 +10,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get("tipproduc/get", [ProductosController::class, "getTipProducs"]);
+Route::get("productos/get", [ProductosController::class, "getProductos"]);
+Route::post("productos/post", [ProductosController::class, "crearProducto"]);
+Route::post("productos/delete", [ProductosController::class, "cancelarProducto"]);

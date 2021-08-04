@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class Produc_faltsController extends Controller
 {
-   public function getTipFaltantes(){
+    public function getTipFaltantes(){
        $faltante = array();
        $faltante[] = "Falto alimento";
        $faltante[] = "Falto limpieza";
@@ -14,12 +14,12 @@ class Produc_faltsController extends Controller
        $faltante[] = "Falta electronico";
 
        return $faltante;
-   }
+    }
 
-   public function getFaltantes(){
+    public function getFaltantes(){
         $faltantes = Faltante::all();
         return $faltantes;
-   }
+    }
     public function crearFaltante(Request $request){
         $input = $request->all();
         $faltante = new Faltante();
@@ -30,4 +30,13 @@ class Produc_faltsController extends Controller
         $faltante->save();
         return $faltante;
     }
+
+    public function eliminarFaltante(Request $request){
+        $input = $request->all();
+        $id = $input["id"];
+        $faltante = Faltante::findOrFail($id);
+        $faltante->delete();
+        return "ok";
+    }
+
 }

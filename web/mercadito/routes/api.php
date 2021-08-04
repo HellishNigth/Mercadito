@@ -22,3 +22,4 @@ Route::post("productos/delete", [ProductosController::class, "cancelarProducto"]
 Route::get("tipfaltante/get", [Produc_faltsController::class, "getTipFaltantes"]);
 Route::get("faltantes/get", [Produc_faltsController::class, "getFaltantes"]);
 Route::post("faltantes/post", [Produc_faltsController::class, "crearFaltante"]);
+Route::post("faltantes/delete", [Produc_faltsController::class, "eliminarFaltante"]);

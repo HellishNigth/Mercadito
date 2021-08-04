@@ -9,7 +9,7 @@
                     <td>Nombre</td>
                     <td>Tipo</td>
                     <td>Cantidad</td>
-                    <td>Acciones</td>
+                    <td>Reaccion</td>
                 </tr>
                 <tbody id="tbody-produc_falt">
 
@@ -20,6 +20,6 @@
 </div>
 @endsection
 @section("javascript")
-
-    <script src="{{asset('js/ver_productos.js')}}"></script>
+    <script src="{{asset('js/servicios/faltantesService.js')}}"></script>
+    <script src="{{asset('js/ver_produc_falt.js')}}"></script>
 @endsection

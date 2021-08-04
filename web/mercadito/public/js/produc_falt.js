@@ -9,7 +9,9 @@ const cargarFaltantes = async()=>{
         faltantetSelect.appendChild(option);
     });
 };
-cargarFaltantes();
+document.addEventListener("DOMContentLoaded", ()=>{
+    cargarFaltantes();
+});
 
 document.querySelector("#registrarfake-btn").addEventListener("click", async ()=>{
     let fnom_produc = document.querySelector("#nombre_produc_falt-txt").value;

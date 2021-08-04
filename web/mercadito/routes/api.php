@@ -13,11 +13,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //Productos
 
 Route::get("tipproduc/get", [ProductosController::class, "getTipProducs"]);
-Route::get("faltante/get", [Produc_faltsController::class, "getFaltantes"]);
 Route::get("productos/get", [ProductosController::class, "getProductos"]);
 Route::post("productos/post", [ProductosController::class, "crearProducto"]);
 Route::post("productos/delete", [ProductosController::class, "cancelarProducto"]);
 
 //Productos faltantes
 
-//Route::get("faltantes/get", [Produc_faltsController::class, "getFaltantes"]);
+Route::get("tipfaltante/get", [Produc_faltsController::class, "getTipFaltantes"]);
+Route::get("faltantes/get", [Produc_faltsController::class, "getFaltantes"]);
+Route::post("faltantes/post", [Produc_faltsController::class, "crearFaltante"]);

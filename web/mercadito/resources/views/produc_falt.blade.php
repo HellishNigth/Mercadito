@@ -23,13 +23,13 @@
                 </div>
             </div>
             <div class="card-footer d-grid gap-1">
-                <button class="btn btn-info">Registrar</button>
+                <button class="btn btn-info" id="registrarfake-btn">Registrar</button>
             </div>
         </div>
     </div>
 </div>
 @endsection
 @section("javascript")
-
+    <script src="{{asset('js/servicios/faltantesService.js')}}"></script>
     <script src="{{asset('js/produc_falt.js')}}"></script>
 @endsection
